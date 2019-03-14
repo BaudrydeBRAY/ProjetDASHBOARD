@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import routes from './routes';
+import Routes from './routes';
 import logo from './logo.svg';
 import './App.css';
 import Line from './Widgets/Line';
@@ -24,27 +24,7 @@ class App extends Component {
                 <Link to="/admin">Admin</Link>
             </div>
         </header>
-        
-        <main>
-            <div class="line">
-                <Line />
-            </div>
-            <div class="bar">
-                <Bar />
-            </div>
-            <div class="pie">
-                <Pie />
-            </div>
-            <div class="radar">
-                <Radar />
-            </div>
-            <div class="area">
-                <Area />
-            </div>
-            <div class="scatter">
-                <Scatter />
-            </div>
-        </main>
+        <Routes />
         
         <footer style={{backgroundColor: "steelblue"}}>
         <h3>
