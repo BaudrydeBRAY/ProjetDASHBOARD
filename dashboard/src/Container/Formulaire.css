@@ -1,0 +1,46 @@
+form {
+    margin: 0 auto;
+    width: 550px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    box-shadow: 5px 2px 2px black;
+    background-color: #B0E0E6;
+  }
+
+  form div + div {
+    margin-top: 1em;
+  }
+  
+  label {
+    display: inline-block;
+    width: 70px;
+    text-align: left;
+    margin-left: 2em;
+  }
+  
+  
+  .button {
+    padding-left: 80px;
+  }
+  
+  button {
+    margin-left: 33em;
+    margin-top: 1em;
+  }
+  
+  textarea {
+    vertical-align: top;
+    height: 5em;
+  }
+  
+  input, textarea {
+    font: 1em sans-serif;
+    width: 400px;
+    box-sizing: border-box;
+    border: 0.5px solid #999;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #000;
+  }

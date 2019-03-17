@@ -8,37 +8,66 @@ import Pie from '../Widgets/Pie';
 import Radar from '../Widgets/Radar';
 import Area from '../Widgets/Area';
 import Scatter from '../Widgets/Scatter';
+import {Container, Row, Col} from 'reactstrap';
+import { Button } from 'reactstrap';
+
+// Import default Bootstrap 4 CSS
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 class Home extends Component {
 
   render() {
     return (
-        <div className="Hom" style={{backgroundColor:"green"}}>
-    	   <h1>home first</h1>
-      
+        <div className="Hom" style={{backgroundColor:"rgb(71, 169, 182)"}}>
+    	 <br/><br/>
+         <h1>Bienvenu dans la section dashboard !</h1>
+         <br/><br/>
 
-        <main>
-        <div class="line">
-            <Line />
-        </div>
-        <div class="bar">
-            <Bar />
-        </div>
-        <div class="pie">
-            <Pie />
-        </div>
-        <div class="radar">
-            <Radar />
-        </div>
-        <div class="area">
-            <Area />
-        </div>
-        <div class="scatter">
-            <Scatter />
-        </div>
+         <main>
+        <Container>
+        <Row>
+            <Col lg="2" md="3" xs="6">
+                <div class="line">
+                    <Line />
+                </div>
+            </Col>
+
+            <Col lg="2" md="3" xs="6">
+                <div class="bar">
+                    <Bar />
+                </div>
+            </Col>
+
+            <Col lg="2" md="3" xs="6">
+                <div class="pie">
+                    <Pie />
+                </div>
+            </Col>
+        </Row>
+
+        <Row>
+            <Col lg="2" md="3" xs="6">
+                <div class="radar">
+                    <Radar />
+                </div>
+            </Col>
+
+            <Col lg="2" md="3" xs="6">
+                <div class="area">
+                    <Area />
+                </div>
+            </Col>
+            
+            <Col lg="2" md="3" xs="6">
+                <div class="scatter">
+                    <Scatter />
+                </div>
+            </Col>
+        </Row>
+        </Container>
         </main> 
-
+        
         </div>
     );
   }

@@ -16,19 +16,22 @@ class App extends Component {
       <div className="App" style={{backgroundColor:"lightsteelblue"}}>
         
         <header style={{backgroundColor: "steelblue"}}>
-            <h1>
+        <br/>
+        <h1>
                 Dashboard
             </h1>
+            
             <div class="topnav">
                 <Link to="/">Home</Link>
                 <Link to="/admin">Admin</Link>
             </div>
         </header>
+
         <Routes />
         
         <footer style={{backgroundColor: "steelblue"}}>
         <h3>
-        Antoine Grès & Baudry De Bray - OCRES 2
+        Antoine Grès & Baudry de Bray - OCRES 2
         </h3>
         </footer>
         
