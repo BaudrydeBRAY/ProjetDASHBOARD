@@ -18,10 +18,10 @@ export default class Example extends PureComponent {
   render() {
     return (
       <ScatterChart
-        width={400}
-        height={400}
+        width={300}
+        height={300}
         margin={{
-          top: 20, right: 20, bottom: 20, left: 20,
+          top: 30, right: 30, bottom: 20, left: 20,
         }}
       >
         <CartesianGrid />

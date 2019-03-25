@@ -49,11 +49,11 @@ export default class Example extends PureComponent {
   render() {
     return (
       <AreaChart
-        width={500}
-        height={400}
+        width={300}
+        height={300}
         data={data}
         margin={{
-          top: 10, right: 30, left: 0, bottom: 0,
+          top: 20, right: 40, left: 10, bottom: 10,
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />

@@ -29,7 +29,7 @@ export default class Example extends PureComponent {
 
   render() {
     return (
-      <RadarChart cx={300} cy={250} outerRadius={150} width={500} height={500} data={data}>
+      <RadarChart cx={200} cy={200} outerRadius={150} width={400} height={400} data={data} margin={{top: 30, right: 30, bottom: 30, left: 30}}>
         <PolarGrid />
         <PolarAngleAxis dataKey="subject" />
         <PolarRadiusAxis />

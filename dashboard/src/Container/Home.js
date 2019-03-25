@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+import './Home.css';
 import {Link} from 'react-router-dom';
 //import routes from './routes';
 import Line from '../Widgets/Line';
@@ -27,39 +28,37 @@ class Home extends Component {
          <main>
         <Container>
         <Row>
-            <Col lg="2" md="3" xs="6">
+            <Col lg="4" md="6" xs="12">
                 <div class="line">
                     <Line />
                 </div>
             </Col>
 
-            <Col lg="2" md="3" xs="6">
+            <Col lg="4" md="6" xs="12">
                 <div class="bar">
                     <Bar />
                 </div>
             </Col>
 
-            <Col lg="2" md="3" xs="6">
+            <Col lg="4" md="6" xs="12">
                 <div class="pie">
                     <Pie />
                 </div>
             </Col>
-        </Row>
-
-        <Row>
-            <Col lg="2" md="3" xs="6">
+ 
+            <Col lg="4" md="6" xs="12">
                 <div class="radar">
                     <Radar />
                 </div>
             </Col>
 
-            <Col lg="2" md="3" xs="6">
+            <Col lg="4" md="6" xs="12">
                 <div class="area">
                     <Area />
                 </div>
             </Col>
             
-            <Col lg="2" md="3" xs="6">
+            <Col lg="4" md="6" xs="12">
                 <div class="scatter">
                     <Scatter />
                 </div>
