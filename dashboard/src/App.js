@@ -18,7 +18,7 @@ class App extends Component {
         <header style={{backgroundColor: "steelblue"}}>
         <br/>
         <h1>
-                Dashboard
+                Dashboard Musique
             </h1>
             
             <div class="topnav">

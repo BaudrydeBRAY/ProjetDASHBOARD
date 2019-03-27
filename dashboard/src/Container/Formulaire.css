@@ -1,6 +1,6 @@
 form {
     margin: 0 auto;
-    width: 550px;
+    width: 700px;
     padding: 1em;
     border: 1px solid #CCC;
     border-radius: 1em;
@@ -14,7 +14,7 @@ form {
   
   label {
     display: inline-block;
-    width: 70px;
+    width: 200px;
     text-align: left;
     margin-left: 2em;
   }
@@ -34,7 +34,7 @@ form {
     height: 5em;
   }
   
-  input, textarea {
+  input, select, textarea {
     font: 1em sans-serif;
     width: 400px;
     box-sizing: border-box;
