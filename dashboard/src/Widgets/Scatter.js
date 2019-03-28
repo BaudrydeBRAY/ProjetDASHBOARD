@@ -17,6 +17,7 @@ export default class Example extends PureComponent {
 
   render() {
     return (
+      <div><h3>Titre à trouver, selon modifs du graphique</h3>
       <ScatterChart
         width={300}
         height={300}
@@ -30,6 +31,7 @@ export default class Example extends PureComponent {
         <Tooltip cursor={{ strokeDasharray: '3 3' }} />
         <Scatter name="A school" data={data} fill="#8884d8" />
       </ScatterChart>
+      </div>
     );
   }
 }

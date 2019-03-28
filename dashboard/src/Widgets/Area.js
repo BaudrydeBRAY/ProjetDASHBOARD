@@ -1,29 +1,30 @@
 import React, { PureComponent } from 'react';
+import './Area.css';
 import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,
 } from 'recharts';
 
 const data = [
   {
-    name: 'Page A', uv: 4000, pv: 2400, amt: 2400,
+    name: '2013', uv: 4000, pv: 2400, amt: 2400,
   },
   {
-    name: 'Page B', uv: 3000, pv: 1398, amt: 2210,
+    name: '2014', uv: 3000, pv: 1398, amt: 2210,
   },
   {
-    name: 'Page C', uv: -1000, pv: 9800, amt: 2290,
+    name: '2015', uv: -1000, pv: 9800, amt: 2290,
   },
   {
-    name: 'Page D', uv: 500, pv: 3908, amt: 2000,
+    name: '2016', uv: 500, pv: 3908, amt: 2000,
   },
   {
-    name: 'Page E', uv: -2000, pv: 4800, amt: 2181,
+    name: '2017', uv: -2000, pv: 4800, amt: 2181,
   },
   {
-    name: 'Page F', uv: -250, pv: 3800, amt: 2500,
+    name: '2018', uv: -250, pv: 3800, amt: 2500,
   },
   {
-    name: 'Page G', uv: 3490, pv: 4300, amt: 2100,
+    name: '2019', uv: 3490, pv: 4300, amt: 2100,
   },
 ];
 
@@ -48,6 +49,7 @@ export default class Example extends PureComponent {
 
   render() {
     return (
+      <div><h3>Evolution des Ventes d'Albums</h3>
       <AreaChart
         width={300}
         height={300}
@@ -68,6 +70,7 @@ export default class Example extends PureComponent {
         </defs>
         <Area type="monotone" dataKey="uv" stroke="#000" fill="url(#splitColor)" />
       </AreaChart>
+      </div>
     );
   }
 }

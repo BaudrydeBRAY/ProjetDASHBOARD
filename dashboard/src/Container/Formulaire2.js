@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './Formulaire.css';
+import './Formulaire2.css';
 
-class Formulaire extends Component {
+class Formulaire2 extends Component {
 	constructor() {
 		super();
 		this.state = {
@@ -9,7 +9,8 @@ class Formulaire extends Component {
 			Artiste: '',
 			Date:'',
 			Style:'',
-			NombredeTitres:''
+            NombredeTitres:'',
+            NouveauStyle:''
 
 
 		}
@@ -44,12 +45,12 @@ class Formulaire extends Component {
 		})
 	}
 
-
     handleNombredeTitresChange = (e) => {
 		this.setState({
 			NouveauStyle: e.target.value
 		})
 	}
+
 
 
 	handleSubmit = (e) => {
@@ -62,7 +63,12 @@ class Formulaire extends Component {
 		<div>
 			<form onSubmit={this.handleSubmit}>
 			<br/>
-			<h2>Ajout d'un nouvel Album</h2>
+			<h2>Modifications d'un Album</h2>
+
+
+            <br/>
+			<h2>ATTENTION: modifs à faire, mettre liste des albums à gauche, la sélectionner afin de pouvoir lancer l'update</h2>
+
 			<br/><br/>
 				<label>Nom : </label>
 				<input name="Nom" type="text" ref={input => this.Nom = input} />
@@ -92,9 +98,6 @@ class Formulaire extends Component {
 
 
 
-				<label>Ajouter un nouveau style : </label>
-				<input name="NouveauStyle" type="text" ref={input => this.NouveauStyle = input} />
-				<br/><br/>
 				<input type="submit" value="Ajouter" />
 				<br/><br/> 
 			</form>
@@ -102,6 +105,6 @@ class Formulaire extends Component {
 		
 		);
 	}
-} export default Formulaire;
+} export default Formulaire2;
 
 //régler pb cashMoney & autres...

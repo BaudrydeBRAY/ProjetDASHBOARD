@@ -4,10 +4,12 @@ import {
 } from 'recharts';
 
 const data = [
-  { name: 'Group A', value: 400 },
-  { name: 'Group B', value: 300 },
-  { name: 'Group C', value: 300 },
-  { name: 'Group D', value: 200 },
+  { name: 'Rock', value: 353 },
+  { name: 'Jazz', value: 245 },
+  { name: 'Pop', value: 305 },
+  { name: 'Classique', value: 122 },
+  { name: 'Electro', value: 96 },
+  { name: 'Rap', value: 88 },
 ];
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
@@ -32,6 +34,7 @@ export default class Example extends PureComponent {
 
   render() {
     return (
+      <div><h3>Pourcentage d'Artistes par rapport aux Styles</h3>
       <PieChart width={200} height={200}>
         <Pie
           data={data}
@@ -48,6 +51,7 @@ export default class Example extends PureComponent {
           }
         </Pie>
       </PieChart>
+      </div>
     );
   }
 }

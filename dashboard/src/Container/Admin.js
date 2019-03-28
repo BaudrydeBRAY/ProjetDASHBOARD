@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Container, Row, Col} from 'reactstrap';
 import { Button } from 'reactstrap';
 import Formulaire from './Formulaire';
+import Formulaire2 from './Formulaire2';
 
 class Admin extends Component {
 
@@ -10,6 +11,8 @@ class Admin extends Component {
         <div className="Adm" style={{backgroundColor:"lightblue"}}>
     	   <br/><br/><h1> Bienvenu dans la section d'administration ! </h1><br/><br/>
          <Formulaire />
+         <br/>
+         <Formulaire2 />
          <br/><br/><br/><br/>
 
         </div>
