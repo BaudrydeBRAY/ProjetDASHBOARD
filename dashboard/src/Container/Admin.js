@@ -3,7 +3,9 @@ import {Container, Row, Col} from 'reactstrap';
 import { Button } from 'reactstrap';
 import Formulaire from './Formulaire';
 import Formulaire2 from './Formulaire2';
-import Formulaire3 from './Formulaire3';
+import FormulaireAdd from './FormulaireAdd';
+import FormulaireEdit from './FormulaireEdit';
+import FormulaireDelete from './FormulaireDelete';
 
 class Admin extends Component {
 
@@ -15,7 +17,9 @@ class Admin extends Component {
          <br/>
          <Formulaire2 />
          <br/>
-         <Formulaire3 />
+         <FormulaireAdd />
+         <br/>
+         <FormulaireEdit />
          <br/><br/><br/><br/>
 
         </div>

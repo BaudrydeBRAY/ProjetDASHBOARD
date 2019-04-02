@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export default class Formulaire3 extends Component {
+export default class FormulaireEdit extends Component {
   constructor(props) {
     super(props);
     this.onChangeNom = this.onChangeNom.bind(this);
@@ -20,31 +20,47 @@ export default class Formulaire3 extends Component {
       NombredeTitres:''
     }
   }
-  onChangeNom(e) {
-    this.setState({
-      Nom: e.target.value
-    });
-  }
-  onChangeArtiste(e) {
-    this.setState({
-      Artiste: e.target.value
-    })  
-  }
-  onChangeDate(e) {
-    this.setState({
-      Date: e.target.value
-    })  
-  }
-  onChangeStyle(e) {
-    this.setState({
-      Style: e.target.value
-    })  
-  }
-  onChangeNombredeTitres(e) {
-    this.setState({
-      nombredeTitres: e.target.value
-    })
-  }
+
+  componentDidMount() {
+      axios.get('http://localhost:4000/albums/edit/'+this.props.match.params.id)
+          .then(response => {
+              this.setState({ 
+                Nom: response.data.Nom, 
+                Artiste: response.data.Artiste,
+                Date: response.data.Date,
+                Style: response.data.Style,
+                NombredeTitres: response.data.NombredeTitres });
+          })
+          .catch(function (error) {
+              console.log(error);
+          })
+    }
+
+    onChangeNom(e) {
+      this.setState({
+        Nom: e.target.value
+      });
+    }
+    onChangeArtiste(e) {
+      this.setState({
+        Artiste: e.target.value
+      })  
+    }
+    onChangeDate(e) {
+      this.setState({
+        Date: e.target.value
+      })  
+    }
+    onChangeStyle(e) {
+      this.setState({
+        Style: e.target.value
+      })  
+    }
+    onChangeNombredeTitres(e) {
+      this.setState({
+        NombredeTitres: e.target.value
+      })
+    }
 
   onSubmit(e) {
     e.preventDefault();
@@ -53,27 +69,19 @@ export default class Formulaire3 extends Component {
       Artiste: this.state.Artiste,
       Date: this.state.Date,
       Style: this.state.Style,
-      nombredeTitres: this.state.nombredeTitres
+      NombredeTitres: this.state.NombredeTitres
     };
-    axios.post('http://localhost:4000/business/add', obj)
+    axios.post('http://localhost:4000/albums/update/'+this.props.match.params.id, obj)
         .then(res => console.log(res.data));
     
-    this.setState({
-        Nom: '',
-        Artiste: '',
-        Date:'',
-        Style:'',
-        NombredeTitres:''
-    })
+    this.props.history.push('/index');
   }
  
   render() {
     return (
         <div style={{ marginTop: 10 }}>
+            <h3 align="center">Mettre à jour l'Album</h3>
             <form onSubmit={this.onSubmit}>
-            <br/>
-			<h2>Ajout d'un nouvel Album</h2>
-			<br/><br/>
                 <div className="form-group">
                     <label>Nom :  </label>
                     <input 
@@ -111,12 +119,14 @@ export default class Formulaire3 extends Component {
                     <label>Nombre de titres : </label>
                     <input type="number" 
                       className="form-control"
-                      value={this.state.nombredeTitres}
+                      value={this.state.NombredeTitres}
                       onChange={this.onChangeNombredeTitres}
                       />
                 </div>
                 <div className="form-group">
-                    <input type="submit" value="Ajouter l'Album" className="btn btn-primary"/>
+                    <input type="submit" 
+                      value="Mettre à jour l'Album" 
+                      className="btn btn-primary"/>
                 </div>
             </form>
         </div>
