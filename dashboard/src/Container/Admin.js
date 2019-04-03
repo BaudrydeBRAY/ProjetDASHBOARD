@@ -5,7 +5,7 @@ import Formulaire from './Formulaire';
 import Formulaire2 from './Formulaire2';
 import FormulaireAdd from './FormulaireAdd';
 import FormulaireEdit from './FormulaireEdit';
-import FormulaireDelete from './FormulaireDelete';
+
 
 class Admin extends Component {
 
