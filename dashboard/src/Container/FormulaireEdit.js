@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import axios from 'axios';
 
@@ -20,7 +21,7 @@ export default class FormulaireEdit extends Component {
       NombredeTitres:''
     }
   }
-
+/*
   componentDidMount() {
       axios.get('http://localhost:4000/albums/edit/'+this.props.match.params.id)
           .then(response => {
@@ -35,6 +36,8 @@ export default class FormulaireEdit extends Component {
               console.log(error);
           })
     }
+  */
+
 
     onChangeNom(e) {
       this.setState({
@@ -80,8 +83,10 @@ export default class FormulaireEdit extends Component {
   render() {
     return (
         <div style={{ marginTop: 10 }}>
-            <h3 align="center">Mettre à jour l'Album</h3>
             <form onSubmit={this.onSubmit}>
+            <br/>
+            <h3 align="center">Mettre à jour l'Album</h3>
+            <br/><br/>
                 <div className="form-group">
                     <label>Nom :  </label>
                     <input 

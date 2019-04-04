@@ -8,22 +8,19 @@ import FormulaireAdd from './FormulaireAdd';
 import FormulaireEdit from './FormulaireEdit';
 
 
-class Admin extends Component {
+class Admin2 extends Component {
 
   render() {
     return (
         <div className="Adm" style={{backgroundColor:"lightblue"}}>
-    	   <br/><br/><h1> Bienvenu dans la section d'administration ! </h1><br/><br/>
-         
-         <div class="topnav">
+    	    <br/><br/><h1> Bienvenu dans la section d'administration ! </h1><br/><br/>
+            <div class="topnav">
                 <Link to="/admin">Ajouter</Link>
                 <Link to="/admin2">Modifier</Link>
-          </div>
+            </div>
 
-         <FormulaireAdd />
-         
-         <br/><br/><br/><br/>
-
+            <FormulaireEdit />
+            <br/><br/><br/><br/>
         </div>
             
         
@@ -31,4 +28,4 @@ class Admin extends Component {
   }
 }
 
-export default Admin;
+export default Admin2;
