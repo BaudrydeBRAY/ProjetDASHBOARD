@@ -4,12 +4,12 @@ import {
 } from 'recharts';
 
 const data = [
-  { x: 100, y: 200, z: 200 },
-  { x: 120, y: 100, z: 260 },
-  { x: 170, y: 300, z: 400 },
-  { x: 140, y: 250, z: 280 },
-  { x: 150, y: 400, z: 500 },
-  { x: 110, y: 280, z: 200 },
+  { x: 100, y: 100, z: 120 },
+  { x: 120, y: 10, z: 160 },
+  { x: 170, y: 200, z: 150 },
+  { x: 140, y: 150, z: 180 },
+  { x: 150, y: 300, z: 350 },
+  { x: 110, y: 180, z: 100 },
 ];
 
 export default class Example extends PureComponent {
@@ -17,7 +17,7 @@ export default class Example extends PureComponent {
 
   render() {
     return (
-      <div><h3>Titre à trouver, selon modifs du graphique</h3>
+      <div><h3>Nombre d'Albums par Artiste</h3>
       <ScatterChart
         width={300}
         height={300}
@@ -26,8 +26,8 @@ export default class Example extends PureComponent {
         }}
       >
         <CartesianGrid />
-        <XAxis type="number" dataKey="x" name="stature" unit="cm" />
-        <YAxis type="number" dataKey="y" name="weight" unit="kg" />
+        <XAxis type="text" dataKey="x" name="Artiste " unit="" />
+        <YAxis type="number" dataKey="y" name="Nombre d'Albums " unit="" />
         <Tooltip cursor={{ strokeDasharray: '3 3' }} />
         <Scatter name="A school" data={data} fill="#8884d8" />
       </ScatterChart>

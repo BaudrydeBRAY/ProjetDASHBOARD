@@ -5,25 +5,25 @@ import {
 
 const data = [
   {
-    name: '2013', NBArtistes: 4000,  amt: 2400,
+    date: '2013', NBArtistes: 4000,  amt: 2400,
   },
   {
-    name: '2014', NBArtistes: 3000,  amt: 2210,
+    date: '2014', NBArtistes: 3000,  amt: 2210,
   },
   {
-    name: '2015', NBArtistes: 2000,  amt: 2290,
+    date: '2015', NBArtistes: 2000,  amt: 2290,
   },
   {
-    name: '2016', NBArtistes: 2780,  amt: 2000,
+    date: '2016', NBArtistes: 2780,  amt: 2000,
   },
   {
-    name: '2017', NBArtistes: 1890,  amt: 2181,
+    date: '2017', NBArtistes: 1890,  amt: 2181,
   },
   {
-    name: '2018', NBArtistes: 2390,  amt: 2500,
+    date: '2018', NBArtistes: 2390,  amt: 2500,
   },
   {
-    name: '2019', NBArtistes: 3490,  amt: 2100,
+    date: '2019', NBArtistes: 3490,  amt: 2100,
   },
 ];
 
@@ -67,7 +67,7 @@ export default class Example extends PureComponent {
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
+        <XAxis dataKey="date" />
         <YAxis />
         <Tooltip />
         <Legend />

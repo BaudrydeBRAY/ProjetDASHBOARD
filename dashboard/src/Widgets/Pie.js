@@ -4,12 +4,12 @@ import {
 } from 'recharts';
 
 const data = [
-  { name: 'Rock', value: 353 },
-  { name: 'Jazz', value: 245 },
-  { name: 'Pop', value: 305 },
-  { name: 'Classique', value: 122 },
-  { name: 'Electro', value: 96 },
-  { name: 'Rap', value: 88 },
+  { Style: 'Rock', value: 353 },
+  { Style: 'Jazz', value: 245 },
+  { Style: 'Pop', value: 305 },
+  { Style: 'Classique', value: 122 },
+  { Style: 'Electro', value: 96 },
+  { Style: 'Rap', value: 88 },
 ];
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
@@ -28,6 +28,8 @@ const renderCustomizedLabel = ({
     </text>
   );
 };
+
+
 
 export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/c9pL8k61/';
